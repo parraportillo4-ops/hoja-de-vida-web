@@ -71,6 +71,7 @@
     </style>
 </head>
 
+
 <body class="bg-light">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
@@ -159,8 +160,9 @@
                                 <p class="tituloInfo fw-bold mb-1">En:</p>
                             </div>
                             <div class="col-12 col-sm-8">
-                                <p class="infoInfo mb-0">Apdistribuciones (8 meses), Hielos Montana (1 mes)</p>
-                            </div>
+<div id="experienciaLaboral">
+    Cargando experiencia...
+</div>                            </div>
                         </div>
                     </div>
                 </div>
@@ -296,6 +298,49 @@
             </div>
         </div>
     </div>
+
+    
+<script>
+async function cargarExperiencia() {
+    const contenedor = document.getElementById("experienciaLaboral");
+
+    try {
+        const respuesta = await fetch(
+            "http://localhost:3000/api/experiencias/hoja/samuel"
+        );
+
+        const experiencias = await respuesta.json();
+
+        if (experiencias.length === 0) {
+            contenedor.innerHTML = "Sin experiencia";
+            return;
+        }
+
+        contenedor.innerHTML = "";
+
+        experiencias.forEach(experiencia => {
+            const experienciaHTML = document.createElement("div");
+
+            experienciaHTML.classList.add("mb-2");
+
+            experienciaHTML.innerHTML = `
+                <strong>${experiencia.empresa}</strong>
+                (${experiencia.duracion})<br>
+                ${experiencia.descripcion}
+            `;
+
+            contenedor.appendChild(experienciaHTML);
+        });
+
+    } catch (error) {
+        console.error("Error:", error);
+        contenedor.innerHTML =
+            "No se pudo cargar la experiencia laboral.";
+    }
+}
+
+cargarExperiencia();
+</script>
 
     <script>
         $(document).ready(function () {
