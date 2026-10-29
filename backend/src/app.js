@@ -22,6 +22,7 @@ app.use(express.json());
 conectarDB();
 
 
+
 // Ruta principal
 app.get("/", (req, res) => {
     res.json({

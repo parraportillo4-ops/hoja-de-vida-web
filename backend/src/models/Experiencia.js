@@ -1,40 +1,44 @@
+
 const mongoose = require("mongoose");
 
-const experienciaSchema = new mongoose.Schema(
-    {
-        hojaVida: {
-            type: String,
-            required: true,
-            enum: ["jhon", "laura", "samuel", "lucia"]
-        },
+const experienciaSchema = new mongoose.Schema({
+  hojaVida: {
+    type: String,
+    required: true,
+    enum: ["jhon", "laura", "samuel", "lucia"]
+  },
+  empresa: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  cargo: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  descripcion: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  fechaInicio: {
+    type: Date,
+    default: null
+  },
+  fechaFin: {
+    type: Date,
+    default: null
+  },
+  actual: {
+    type: Boolean,
+    default: false
+  }
+}, {
+  timestamps: true
+});
 
-        empresa: {
-            type: String,
-            required: true,
-            trim: true
-        },
-
-        cargo: {
-            type: String,
-            required: true,
-            trim: true
-        },
-
-        descripcion: {
-            type: String,
-            required: true,
-            trim: true
-        },
-
-        duracion: {
-            type: String,
-            required: true,
-            trim: true
-        }
-    },
-    {
-        timestamps: true
-    }
+module.exports = mongoose.model(
+  "Experiencia",
+  experienciaSchema
 );
-
-module.exports = mongoose.model("Experiencia", experienciaSchema);
