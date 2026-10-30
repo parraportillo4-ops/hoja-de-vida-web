@@ -11,8 +11,8 @@ const personas = {
     nombre: "Jhon Anthony Ramon Parra Portillo",
     foto: "/fotos/Jhon.jpeg",
     direccion: "Cereté, Córdoba",
-    telefono: "Agregar teléfono",
-    correo: "Agregar correo electrónico",
+    telefono: "3008975786",
+    correo: "parraportillo4@gmail.com",
     perfil:
       "Estudiante de Ingeniería de Software con formación en creación de software y experiencia en atención al cliente y ventas.",
     educacion: [
@@ -39,9 +39,9 @@ const personas = {
   laura: {
     nombre: "Laura Maria Petro Pacheco",
     foto: "/fotos/Laura.jpeg",
-    direccion: "Agregar dirección",
-    telefono: "Agregar teléfono",
-    correo: "Agregar correo electrónico",
+    direccion: "Cereté, Cordoba",
+    telefono: "3005530874",
+    correo: "laura244284@gmail.com",
     perfil:
       "Perfil personal y profesional orientado a la formación académica, el desarrollo de habilidades y el crecimiento profesional.",
     educacion: [
@@ -62,16 +62,16 @@ const personas = {
   samuel: {
     nombre: "Samuel",
     foto: "/fotos/Samuel.jpeg",
-    direccion: "Agregar dirección",
-    telefono: "Agregar teléfono",
-    correo: "Agregar correo electrónico",
+    direccion: "cereté, Cordoba",
+    telefono: "3123342115",
+    correo: "ortizsamuel007@gmail.com",
     perfil:
       "Perfil académico y profesional. Completar con la información personal, la formación y los objetivos profesionales.",
     educacion: [
       {
         titulo: "Formación académica",
-        institucion: "Agregar institución educativa",
-        detalle: "Agregar nivel de estudios"
+        institucion: "Marceliano polo",
+        detalle: "Actualmente en 2ndo año de ingenieria de software"
       }
     ],
     aptitudes: [
@@ -85,9 +85,9 @@ const personas = {
   lucia: {
     nombre: "Maria Lucia Gonzalez Polo",
     foto: "/fotos/Lucia.jpeg",
-    direccion: "Agregar dirección",
-    telefono: "Agregar teléfono",
-    correo: "Agregar correo electrónico",
+    direccion: "Cereté, Cordoba",
+    telefono: "3113770080",
+    correo: "mgonzalez@unicartagena.edu.com",
     perfil:
       "Estudiante universitaria interesada en su desarrollo académico y profesional, con disposición para aprender y trabajar en equipo.",
     educacion: [
@@ -280,12 +280,12 @@ function Navegacion() {
       <strong>Hojas de vida</strong>
 
       <div className="navlinks">
-        <Link to="/hoja/jhon">Jhon</Link>
-        <Link to="/hoja/laura">Laura</Link>
-        <Link to="/hoja/samuel">Samuel</Link>
-        <Link to="/hoja/lucia">Lucía</Link>
+        <Link to="/hoja/jhon">Jhon  </Link>
+        <Link to="/hoja/laura">Laura  </Link>
+        <Link to="/hoja/samuel">Samuel  </Link>
+        <Link to="/hoja/lucia">Lucia  </Link>
         <Link to="/admin/experiencias">
-          Administrar experiencias
+          Administrar experiencias  
         </Link>
       </div>
     </nav>

@@ -230,10 +230,10 @@ export default function AdminExperiencias() {
         <strong>Administración de hojas de vida</strong>
 
         <div className="navlinks">
-          <Link to="/hoja/jhon">Jhon</Link>
-          <Link to="/hoja/laura">Laura</Link>
-          <Link to="/hoja/samuel">Samuel</Link>
-          <Link to="/hoja/lucia">Lucía</Link>
+          <Link to="/hoja/jhon">Jhon </Link>
+          <Link to="/hoja/laura">Laura </Link>
+          <Link to="/hoja/samuel">Samuel </Link>
+          <Link to="/hoja/lucia">Lucia </Link>
         </div>
       </nav>
 
